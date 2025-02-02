@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Leanne, Will You Be My Valentine? 💙</title>
+    <style>
+        body {
+            background-color: cyan;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .heart {
+            font-size: 3em;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .gif-container {
+            margin: 20px 0;
+        }
+        .choice-btn {
+            background: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .no-btn {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moveNoButton() {
+            let x = Math.random() * window.innerWidth * 0.8;
+            let y = Math.random() * window.innerHeight * 0.8;
+            document.getElementById("no-btn").style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine? 💙</h1>
+        <div class="gif-container">
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM5amk3NWlzY3dnemxxMmMxY2RmdWM1OHhnOHdsam5sM3VkcWR4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZXqZTlhUkCMbcps4LJ/giphy.gif" width="300" alt="Cute Love GIF">
+        </div>
+        <div>
+            <button class="choice-btn" onclick="alert('Yay! You made my day! 💖')">YES</button>
+            <button id="no-btn" class="choice-btn" onclick="moveNoButton()">NO</button>
+        </div>
+    </div>
+</body>
+</html>
